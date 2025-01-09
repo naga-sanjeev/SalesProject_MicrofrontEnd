@@ -1,0 +1,33 @@
+.active-status {
+    color: green;
+}
+
+.inactive-status {
+    color: red;
+}
+
+.tableData {
+    font-weight: 700;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-thead>tr>th {
+    text-align: center;
+    font-weight: 600;
+    color: #7b8087;
+}
+
+
+
+:host ::ng-deep .p-datatable .p-datatable-tbody>tr>td {
+    text-align: center;
+    /* padding: 1rem 1rem; */
+}
+
+.pi {
+    font-weight: 600;
+}
+
+.p-text {
+    color: #00aae7;
+    cursor: pointer;
+}

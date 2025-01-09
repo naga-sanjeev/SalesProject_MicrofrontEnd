@@ -1,0 +1,30 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="grid">
+	<div class="col-12">
+		<div class="card">
+			<div class="p-fluid p-formgrid grid">
+				<div class="field col-12 md:col-6">
+                    <app-input [InputFieldName]="ClientName" ></app-input>
+				</div>
+				<div class="field col-6 md:col-6" >
+                    <app-dropdown [options]="states" [selectedState]="selectedState" [optionLabel]="name"></app-dropdown>
+				</div>
+				<div class="field col-12 md:col-6">
+                    <!-- <app-input [InputFieldName]="InputFieldName" ></app-input> -->
+					<p-calendar [showIcon]="true"  id="city" type="text" placeholder="DD/MM/YYYY"  inputId="icon"></p-calendar>
+				</div>
+				<div class="field col-12 md:col-6">
+                    <app-input [InputFieldName]="InputFieldName1"></app-input>
+				</div>
+				<div class="field col-12 md:col-12">
+					<label htmlFor="state">Requirement</label>
+					<textarea [rows]="3" [cols]="30" pInputTextarea ></textarea>
+				</div>
+				<div class="field col-12 md:col-21">
+					<label htmlFor="zip">Conversation</label>
+					<textarea [rows]="3" [cols]="30" pInputTextarea></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

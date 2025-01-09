@@ -1,0 +1,41 @@
+
+<!-- <app-sidenav fxLayout="column" ></app-sidenav> -->
+
+<div flexLayout="row" *ngIf="mobileView">
+    <app-sidenav fxLayout="column" [fxFlex]="flexValue1" *ngIf="mobileResponsive"></app-sidenav>
+    <div flexLayout="column" [fxFlex]="flexValue2">
+        <app-header flexLayout="column" style="position: sticky; top: 0;"></app-header>
+        <div [ngClass]="'content body'">
+            <router-outlet></router-outlet>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
+
+
+<app-header *ngIf="normalView" flexLayout="column" style="position: sticky; top: 0;"></app-header>
+<div *ngIf="normalView" fxLayout="row" fxFlex="100">
+    <div [fxFlex]="flexValue1" *ngIf="menu2">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div fxLayout="column" class="content" [fxFlex]="flexValue2">
+        <div class="body">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>
+
+<!-- 
+<app-header flexLayout="column" style="position: sticky; top: 0;"></app-header>
+<div fxLayout="row" fxFlex="100">
+    <div fxFlex="19"  *ngIf="menu2">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div  fxLayout="column" class="content" fxFlex>
+        <div fxFlex>
+            <router-outlet ></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div> -->

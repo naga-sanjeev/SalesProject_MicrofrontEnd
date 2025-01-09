@@ -1,0 +1,25 @@
+.text{
+    bottom: 0;
+    /* position: absolute; */
+    text-align: center;
+    /* padding-bottom: 2%; */
+}
+
+.hint-text{
+    opacity: .7;
+}
+
+.font-montserrat{
+    line-height: 18px;
+    font-size: 85%;
+}
+
+@media screen and (max-width:1000px) {
+    .text{
+        align-items: center;
+        position: relative;
+        padding-top: 2rem;
+        bottom: 0;
+    }
+}
+

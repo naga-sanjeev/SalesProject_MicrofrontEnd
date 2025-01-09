@@ -1,0 +1,69 @@
+<p-table [columns]="cols" [value]="products" >
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns ;let i = index" class="tableData">
+                <ng-container *ngIf="col.header === 'Status'">
+                    <span [ngClass]="rowData[col.field] === 'Active' ? 'active-status' : 'inactive-status'">
+                        {{rowData[col.field]}}
+                    </span>
+                </ng-container>
+                <ng-container *ngIf="col.header !== 'Status' && col.header !== 'Architecture'">
+                    {{rowData[col.field]}}
+                </ng-container>
+                <ng-container *ngIf="col.header === 'Architecture'">
+                    <i class="pi pi-eye" pTooltip="Architecture" tooltipPosition="top" (click)="openDialog1(rowData, columns[0])"></i>&nbsp;
+                    <i class="pi pi-download" pTooltip="Download" tooltipPosition="top"></i>
+                </ng-container>
+                <ng-container *ngIf="col.header == 'Project Info'">
+                    <p class="p-text"><a >more</a></p>
+                </ng-container>
+                <ng-container *ngIf="col.header === 'Actions'">
+                    <i class="pi pi-pencil" pTooltip="Edit" tooltipPosition="top" (click)="openDialog(rowData, columns[0],i)"></i>&nbsp;
+                    <i class="pi pi-history" pTooltip="History" tooltipPosition="top"></i>&nbsp;
+                    <i class="pi pi-trash" pTooltip="Delete" tooltipPosition="top"></i>
+                </ng-container>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+
+<!-- <app-dialog [visible]="showDialog"></app-dialog> -->
+
+
+
+<!-- <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+        <td *ngFor="let col of columns" class="tableData">
+            <ng-container *ngIf="col.header === 'Status'">
+                <span [ngClass]="rowData[col.field] === 'Active' ? 'active-status' : 'inactive-status'">
+                    {{rowData[col.field]}}
+                </span>
+            </ng-container>
+            <ng-container *ngIf="col.header !== 'Status' && col.header !== 'Architecture'">
+                {{rowData[col.field]}}
+            </ng-container>
+            <ng-container *ngIf="col.header === 'Architecture'">
+                <i class="pi pi-eye" pTooltip="Architecture" tooltipPosition="top"
+                    (click)="showArchitecture()"></i>&nbsp;
+                <i class="pi pi-download" pTooltip="Download" tooltipPosition="top"></i>
+            </ng-container>
+            <ng-container *ngIf="col.header == 'Project Info'">
+                <p class="p-text"><a (click)="goToProjectInfo(rowData)">more</a></p>
+            </ng-container>
+            <ng-container *ngIf="col.header === 'Actions'">
+                <i class="pi pi-pencil" pTooltip="Edit" tooltipPosition="top" (click)="edit(rowData)"></i>&nbsp;
+                <i class="pi pi-history" pTooltip="History" tooltipPosition="top"></i>&nbsp;
+                <i class="pi pi-trash" pTooltip="Delete" tooltipPosition="top"></i>
+            </ng-container>
+        </td>
+    </tr>
+</ng-template> -->

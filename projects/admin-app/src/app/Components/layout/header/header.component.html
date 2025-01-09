@@ -1,0 +1,38 @@
+<div *ngIf="header1" class="topbar" >
+    <div flexLayout="row" fxFlex>
+        <div  fxFlex="18">
+            <div fxLayoutAlign="space-between center" >
+                <img alt="layout" src="assets/logo.png" class="miracleLogo">
+                <i class="pi pi-bars" (click)="clickSideBar()"></i>
+            </div>
+        </div>
+        <div fxFlex="10">
+                <div class="body">
+                    <a><img alt="layout" class="logo" src="assets/image1.png"></a>
+                    <a><img alt="layout" class="logo" src="assets/image3.png"></a>
+                    <a><img alt="layout" class="logo" src="assets/image2.png"></a>
+                    <a><img alt="layout" class="logo" src="assets/image4.png"></a>
+                </div>
+        </div>
+        <div  fxFlex="69">
+            <div style="display: flex;justify-content: end;align-items: center;padding-left: 1rem;">
+                {{name}}
+                <img alt="layout" src="assets/profile-logo.jpg" class='profile'>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div  *ngIf="!header1"  class="topbar">
+    <div flexLayout="row" fxFlex>
+        <div *ngIf="header2" fxFlex="99">
+            <div [fxLayoutAlign]="fxLayoutAlign" >
+                <i class="pi pi-bars" (click)="clickSideBar()"></i>
+                <img alt="layout" src="assets/logo.png" class="miracleLogo">
+                <img alt="layout" src="assets/profile-logo.jpg" class='profile' *ngIf="profileImg">
+            </div>
+        </div>
+    </div>
+</div>
+
+

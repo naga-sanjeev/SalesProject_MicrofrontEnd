@@ -1,0 +1,149 @@
+/* 
+.login{
+    background-image:url('/assets/login.jpg');
+    height:100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.card{
+   align-items: center;
+   justify-content: center;
+   height:auto;
+   background: #cecccc;
+   opacity: 0.9;
+   width:22%;
+}
+
+.container{
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    height:auto;
+    text-align: center;
+}
+.card-header{
+    width:8%;
+    height:5%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin-top:2%;
+}
+.p-button{
+    width:100%
+}
+.eyeicon{
+    position:absolute;
+    cursor: pointer;
+    padding-top: 0.5%;
+    padding-left: 16.5%;
+}
+@media(max-width:1030px){
+    .card-header{
+        margin-top:3%;
+        height:4%;
+    }
+    .card{
+        width:45%
+    }
+}
+
+@media (max-width:920px){
+    .card-header{
+        margin-top:3%;
+        height:3%;
+    }
+    .card{
+        width:45%
+    }
+}
+@media  (max-width:800px)  {
+    .card-header{
+        margin-top:3%;
+        /* // margin-bottom: 1%; */
+    /* }
+    .card{
+        width:40%
+    }
+}
+
+@media  (max-width:560px) {
+    .card-header{
+        margin-top:4%;
+    }
+}
+@media(max-width:480px){
+    .card{
+        height:100%;
+        background: #cecccc;
+        width:100%;
+     }
+     .container{
+        height:90%;
+    }
+    .card-header{
+        margin-top:5%;
+    }
+}
+@media(max-width:430px){
+    .card-header{
+        margin-top:6%;
+        width:20%
+    }
+} */ 
+
+.bg-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/login.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    width: 370px;
+    text-align: center;
+    padding: 27px 32px;
+    background: #282828c2;
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+
+    .content header {
+        color: #FFF;
+        font-size: 33px;
+        font-weight: 600;
+        margin: 0 0 35px 0;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.copyRightStyle{
+    margin-top: 39px;
+    color:#a9a7a7;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.imageStyle{
+    width: 180px;
+    height: 20%;
+    padding-bottom: 15px;
+}
+::ng-deep.p-button{
+    width:68%
+}

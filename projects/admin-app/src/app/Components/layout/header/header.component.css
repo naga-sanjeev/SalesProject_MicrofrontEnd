@@ -1,0 +1,49 @@
+.topbar{
+    padding-top:0.5rem;
+    padding-left: 1.4rem;
+    width:100%;
+    padding-bottom: 0.5rem;
+    align-items: center;
+}
+.miracleLogo{
+  width:7.8rem;
+  height:auto;
+}
+.logoColor{
+    background-color: #2d2d32;
+    border-bottom: 1px solid #29292d;
+    color: #fff;
+}
+.body{
+    padding-top:0.5rem;
+    padding-left: 2rem;
+    width:100%;
+    display: flex;
+    height:auto;gap: 5px;
+}
+
+.logo{
+  width:auto;
+  height: 1.5rem;
+}
+.end{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.profile{
+  width:40px;
+  height:35px;
+}
+
+@media (max-width:1000px){
+    .topbar{
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+    }
+}
+@media screen and (max-width:1000px) and (min-width:240px) {
+/* .pi{
+    padding-bottom: inherit;
+} */
+}

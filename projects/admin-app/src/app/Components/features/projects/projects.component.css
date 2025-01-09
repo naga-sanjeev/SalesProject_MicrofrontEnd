@@ -1,0 +1,33 @@
+:host ::ng-deep .p-datatable .p-datatable-tbody>tr>td {
+    text-align: center;
+    border-width: 0 0 1px 0;
+    padding: 0rem 0rem;
+}
+:host ::ng-deep .field  {
+   margin-bottom: 0px;
+}
+:host ::ng-deep .p-button {
+    color: #ffffff;
+    background: #0d416b;
+    border: #0d416b;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.p-inputtext {
+    font-size: 1rem;
+    background: #00aae7;
+    color: white;
+}
+
+.p-input-icon-left > i:first-of-type {
+    left: 0.75rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+::placeholder {
+    color: white;
+    font-weight: 600;
+}

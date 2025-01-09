@@ -1,0 +1,18 @@
+:host ::ng-deep .p-breadcrumb {
+    font-family: 'Open Sans', sans-serif !important;
+    border: none;
+    text-transform: uppercase;
+    font-size: 10.5px!important;
+    font-weight: 500;
+    background-color:#f9f9f9 ;
+    padding-left: 15px;
+}
+
+:host ::ng-deep .pi {
+    color: #515050;
+    font-size: 8px;
+    font-weight: 700;
+}
+:host ::ng-deep .p-breadcrumb ul li:last-child .p-menuitem-text{
+    color: #0090d9!important;
+}

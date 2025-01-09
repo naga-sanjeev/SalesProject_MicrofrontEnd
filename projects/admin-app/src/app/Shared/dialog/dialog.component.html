@@ -1,0 +1,24 @@
+<!-- <p-dialog [(visible)]="visible" [style]="{width: '50vw'}">
+    efrwjhefgbwefhc
+</p-dialog> -->
+<div *ngIf="value1">
+    <p>Content of the dialog for</p>
+    <form [formGroup]="myForm">
+        <label for="ProjectName">ProjectName:</label>
+        <input pInputText type="text" id="ProjectName" formControlName="ProjectName"><br><br>
+        <label for="PracticeName">PracticeName:</label>
+        <input pInputText type="text" id="PracticeName" formControlName="PracticeName"><br><br>
+        <label for="IndustryType">IndustryType:</label>
+        <input pInputText type="text" id="IndustryType" formControlName="IndustryType"><br><br>
+        <label for="Status">Status:</label>
+        <input pInputText type="text" id="Status" formControlName="Status"> <br><br>
+        <button pButton type="button" #data (click)="onClick()">Edit</button>
+    </form>
+    
+</div>
+<div *ngIf="value">
+    <p>Architecure </p><br>
+    <p>Content of Architecurer</p><br>
+    <p>Content of the dialog for</p><br>
+    <p>Content of the dialog for</p><br>
+</div>

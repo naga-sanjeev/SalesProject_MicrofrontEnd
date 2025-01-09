@@ -1,0 +1,8 @@
+:host ::ng-deep .p-datatable .p-datatable-tbody>tr>td {
+    text-align: center;
+    border-width: 0 0 1px 0;
+    padding: 0rem 0rem;
+}
+:host ::ng-deep .field  {
+   margin-bottom: 0px;
+}

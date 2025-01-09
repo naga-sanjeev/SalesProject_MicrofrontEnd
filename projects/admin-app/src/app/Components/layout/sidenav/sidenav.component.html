@@ -1,0 +1,82 @@
+<!-- <div *ngIf="sidenav1" class="sideBar">
+    <div class="menuItems">
+        <div *ngFor="let menu of menuItems" class="menuItem" [class.active]="isActive(menu.link)">
+            <div class="menuContent" [routerLink]="menu.link" (click)="setActive(menu.link)">
+                <span class="menuLabel">{{ menu.label }}</span>
+                <span class="menuIcon">
+                    <i [class]="menu.icon"></i>
+                </span>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div *ngIf="sidenav1" flexLayout="column">
+    <div class="sideBar">
+        <div class="menuItems">
+            <div *ngFor="let menu of menuItems" class="menuItem" [class.active]="isActive(menu.link)">
+                <div class="menuContent" [routerLink]="menu.link" (click)="setActive(menu.link)">
+                    <span class="menuLabel">{{ menu.label }}</span>
+                    <span class="menuIcon">
+                        <i [class]="menu.icon"></i>
+                    </span>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="sidenav2" flexLayout="column">
+    <div class="sideBar">
+        <div class="menuItems">
+            <div *ngFor="let menu of menuItems" class="menuItem" [class.active]="isActive(menu.link)">
+                <div class="menuContent" [routerLink]="menu.link" (click)="setActive(menu.link)">
+                    <span class="menuLabel">{{ menu.label }}</span>
+                    <span class="menuIcon">
+                        <i [class]="menu.icon"></i>
+                    </span>
+                </div>
+                <br/>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- <div *ngIf="mobileView" class="logoColor"  fxLayoutAlign="space-evenly center">
+    <img alt="layout" src="assets/Miracle-Logo-White.png" class="miracleLogo">
+</div>
+<div class="sideBar">
+    <div class="menuItems">
+        <div *ngFor="let menu of menuItems" class="menuItem" [class.active]="isActive(menu.link)">
+            <div class="menuContent" [routerLink]="menu.link" (click)="setActive(menu.link)">
+                <span class="menuLabel">{{ menu.label }}</span>
+                <span class="menuIcon">
+                    <i [class]="menu.icon"></i>
+                </span>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div fxLayout="column" class="sideBar">
+    <div *ngIf="mobileView" class="logoColor"  fxLayoutAlign="space-evenly center">
+        <img alt="layout" src="assets/Miracle-Logo-White.png" class="miracleLogo">
+    </div>
+    <div class="menuItems">
+        <div (click)="linkSelected()" *ngFor="let menu of menuItems" class="menuItem" [class.active]="isActive(menu.link)">
+            <div class="menuContent" [routerLink]="menu.link" (click)="setActive(menu.link)">
+                <span fxLayoutAlign="center start" class="menuLabel">{{ menu.label }}</span>
+                <span class="menuIcon">
+                    <i [class]="menu.icon"></i>
+                </span>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div>

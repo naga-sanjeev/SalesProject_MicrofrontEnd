@@ -1,0 +1,51 @@
+<!-- <div class="login">
+    <p-card class="card">
+        <p-card class="container">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="assets/logo.png" class="card-header">
+            </ng-template>
+            <div>
+                <p style="text-align: center;">Enter User name and Password</p>
+                <form [formGroup]="loginForm">
+                    <p style="text-align: start;">
+                        Username
+                    </p>
+                    <div class="p-inputgroup">
+                        <input type="text" autocomplete="off" formControlName="email" placeholder="User name"
+                            pInputText>
+                    </div>
+                    <p style="text-align: start;">Password</p>
+                    <div class="p-inputgroup">
+                        <input type="password" formControlName="password" placeholder="Password" (toggleMask)="true"
+                            pInputText>
+                    </div>
+                    <br />
+                    <button (click)="login()" pButton type="button" label="Login"
+                        [routerLink]="['/dashboard']"></button><br />
+                </form>
+            </div>
+        </p-card>
+    </p-card>
+    <br /><br />
+</div> -->
+
+
+<div class="bg-img">
+    <div class="content">
+        <img class="imageStyle" src="/assets/Miracle-Logo-White.png">
+        <form [formGroup]="loginForm" class="loginForm">
+            <div class="field">
+                <app-input [InputFieldName]="InputFieldName"></app-input>
+            </div>
+            <div class="field">
+                <app-input [InputFieldName]="InputPasswordName"></app-input>
+            </div>
+            <div class="field ">
+                <app-button [buttonColor]="color"  [buttonText]="buttonName" [routerLink]="['/dashboard/projects']"></app-button>
+            </div>
+        </form>
+        <div>
+            <h6 class="copyRightStyle">© 2023 Miracle Software Systems, Inc.</h6>
+        </div>
+    </div>
+</div>

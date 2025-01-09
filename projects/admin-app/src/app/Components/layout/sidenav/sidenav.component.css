@@ -1,0 +1,69 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.miracleLogo {
+    width: 7.8rem;
+    height: auto;
+}
+
+.logoColor {
+    background-color: #2d2d32;
+    border-bottom: 1px solid #29292d;
+    color: #fff;
+}
+
+.sideBar {
+    background-color: #353434;
+    height: 91vh;
+    /* position: sticky;
+    top: 0; */
+
+}
+
+.menuItems {
+    color: #84848e;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px;
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-left: 5%;
+}
+
+.menuIcon {
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pi {
+    font-size: 14px;
+}
+
+.menuItem:hover {
+    color: #f0f0f0;
+}
+
+.menuContent {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+
+}
+
+.menuLabel {
+    padding-left: 10px;
+}
+
+.menuItem.active .menuLabel,
+.menuItem.active .menuIcon {
+    color: #f0f0f0;
+}
