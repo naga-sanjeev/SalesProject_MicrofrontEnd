@@ -1,0 +1,125 @@
+<div *ngIf="value1">
+    <div class="grid col-12">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Project Name</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.projectName}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Practice Name</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.practiceName}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Industry Type</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.industryType | titlecase}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Status</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.status}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Start Date</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.startDate | date}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">End Date</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.endDate | date}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Description</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.description}}
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="salesTraineeMyActivities">
+    <div class="grid col-12">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Client Name</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.clientName}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Practice Name</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.practiceName}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Role</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.role}}
+            </div>
+        </div>
+        <hr class="divider">
+        <div class="row">
+            <div class="col-3">
+                <label class="labelStyle">Submitted By</label>
+            </div>
+            <div class="col-7">
+                {{config.data?.rowData.name}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="value">
+    <div *ngIf="config.data?.rowData.architecture">
+        <img alt="layout" [src]="config.data?.rowData.architecture" class="image">
+    </div>
+    <div *ngIf="!config.data?.rowData.architecture">
+        File not uploaded
+    </div>
+</div>
+
+<div class="card" *ngIf="history">
+    <p-timeline [value]="historyDisplay" align="alternate">
+        <ng-template pTemplate="content" let-event>
+            <div class="timeline-item">
+                <div [innerHTML]="event.status" class="status-content"></div>
+                <small class="p-text-secondary">{{ event.date }}</small>
+            </div>
+        </ng-template>
+    </p-timeline>
+</div>

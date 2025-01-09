@@ -1,0 +1,44 @@
+<app-breadcrumb [items]="breadcrumb"></app-breadcrumb>
+<div class="cardStyle">
+	<h4 class="heading">Add New Client</h4>
+	<form [formGroup]="addClient">
+		<div class="p-fluid p-formgrid grid">
+			<div class="field col-12 md:col-6">
+				<app-input formControlName="clientName" [InputFieldName]="clientName"
+					[control]="addClient.get('clientName')" [useMarginLeft]="true"></app-input>
+			</div>
+			<div class="field col-12 md:col-6">
+				<app-calendar formControlName="date" [dateField]="datefield" [control]="addClient.get('date')"
+					[useMarginLeft]="true"></app-calendar>
+			</div>
+			<div class="field col-12 md:col-6">
+				<app-dropdown formControlName="sectorType" [options]="industrydropdownData"
+					[placeholderValue]="sectorPlaceholder" [selectedState]="selectedState" [optionLabel]="name"
+					[control]="addClient.get('sectorType')" [useMarginLeft]="true"></app-dropdown>
+			</div>
+			<div class="field col-12 md:col-6">
+				<app-dropdown formControlName="practiceType" [options]="practiceDropdownData"
+					[selectedState]="selectedState" [placeholderValue]="practicePlaceholder" [optionLabel]="name"
+					[control]="addClient.get('practiceType')" [useMarginLeft]="true"></app-dropdown>
+			</div>
+			<div class="field col-12 md:col-12">
+				<app-input formControlName="poc" [InputFieldName]="poc" [control]="addClient.get('poc')"
+					[useMarginLeft]="true"></app-input>
+			</div>
+			<div class="field col-12 md:col-12">
+				<app-input-textarea formControlName="requirement" [textareaPlaceholder]="Requirement"
+					[control]="addClient.get('requirement')"></app-input-textarea>
+			</div>
+			<div class="field col-12 md:col-12">
+				<app-input-textarea formControlName="conversation" [textareaPlaceholder]="Conversation"
+					[control]="addClient.get('conversation')"></app-input-textarea>
+			</div>
+		</div>
+		<div class="col-12 buttonStyle">
+			<app-button [buttonText]="resetButtonName" [buttonColor]="resetbuttonColor" (click)="reset()"></app-button>
+			&nbsp;
+			<app-button [buttonText]="buttonName" [buttonColor]="addClientColor"
+				(click)="addClientEvent()"></app-button>
+		</div>
+	</form>
+</div>

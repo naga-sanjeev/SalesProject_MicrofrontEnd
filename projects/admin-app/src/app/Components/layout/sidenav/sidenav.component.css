@@ -1,0 +1,167 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menuItem:hover {
+    color: #f0f0f0;
+}
+
+.miracleLogo {
+    width: 7.8rem;
+    height: auto;
+}
+
+.logoColor {
+    background-color: #2d2d32;
+    border-bottom: 1px solid #29292d;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+}
+
+.sideBar {
+    background-color: #353434;
+    display: flex;
+    height: 100%;
+    position: fixed;
+    width: 18%;
+}
+
+.menuItems {
+    color: #84848e;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px;
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-left: 5%;
+}
+
+.menuIcon {
+    text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pi {
+    font-size: 14px;
+}
+
+.menuItem:hover {
+    color: #f0f0f0;
+}
+
+.menuContent {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    justify-content: space-between;
+
+}
+
+.menuLabel {
+    padding-left: 10px;
+}
+
+.menuItem.active .menuLabel,
+.menuItem.active .menuIcon {
+    color: #f0f0f0;
+}
+
+@media screen and (max-width:1399px) and (min-width:1300px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 19%;
+    }
+}
+
+@media screen and (max-width:1299px) and (min-width:1200px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:999px) and (min-width:900px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 47%;
+    }
+}
+
+@media screen and (max-width:899px) and (min-width:800px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 47%;
+    }
+}
+
+@media screen and (max-width:799px) and (min-width:700px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 52%;
+    }
+}
+
+@media screen and (max-width:699px) and (min-width:600px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 56%;
+    }
+}
+
+@media screen and (max-width:599px) and (min-width:500px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:499px) and (min-width:400px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:399px) and (min-width:300px) {
+    .sideBar {
+        background-color: #353434;
+        height: 100%;
+        width: 54%;
+    }
+}
+
+.menuItem.active .menuLabel,
+.menuItem.active .menuIcon {
+    color: #f0f0f0;
+}
+
+.active {
+    color: white;
+    text-decoration: none;
+}
+
+.active-group {
+    background-color: none;
+}
+
+::ng-deep .active-link {
+    color: #fff !important;
+}

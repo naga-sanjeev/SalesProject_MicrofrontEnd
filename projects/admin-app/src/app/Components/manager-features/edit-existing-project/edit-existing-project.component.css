@@ -1,0 +1,152 @@
+.buttonStyle {
+    display: flex;
+    justify-content: end;
+}
+
+:host ::ng-deep .p-datepicker table td {
+    padding: 0rem;
+}
+
+:host ::ng-deep .p-datepicker table td>span {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0%;
+    transition: box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+:host ::ng-deep .p-calendar .p-datepicker {
+    min-width: 0%;
+}
+
+:host ::ng-deep .p-datepicker .p-datepicker-header {
+    padding: 0rem;
+    color: #495057;
+    background: #ffffff;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 0px solid #dee2e6;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+:host ::ng-deep .p-datepicker table td.p-datepicker-today>span {
+    background: #00aae7;
+    color: white;
+    border-color: transparent;
+}
+
+:host ::ng-deep .p-datepicker table td.p-datepicker-today>span :hover {
+    background: #00aae7;
+    color: white;
+    border-color: transparent;
+}
+
+.heading {
+    font-family: "Open Sans", sans-serif !important;
+    color: #2c2c2c;
+    line-height: 25.88px;
+    font-size: 17px;
+}
+
+.cardStyle {
+    background-color: #ffffff;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+:host ::ng-deep .field {
+    margin-bottom: -2px;
+}
+
+.field>label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
+.labelStyle {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px;
+    letter-spacing: .06em;
+    font-weight: 500;
+}
+
+.uploadImgStyle {
+    background-color: #0d416b;
+    width: 20%;
+    padding: 12px;
+}
+
+.iconStyle {
+    background-color: #0d416b;
+    color: white;
+    padding: 12px;
+    position: absolute;
+}
+
+.file-upload {
+    display: block;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.file-upload .file-select {
+    display: block;
+    border: #0d416b solid 4px;
+    background: #0d416b;
+    color: #0f0f0f;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+}
+
+.file-upload .file-select .file-select-button {
+    background: #ffffff;
+    padding: 0 10px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.file-upload .file-select .file-select-name {
+    line-height: 40px;
+    display: inline-block;
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+.file-upload.active .file-select {
+    border-color: #3fa46a;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.file-upload.active .file-select .file-select-button {
+    background: #3fa46a;
+    color: #0f0f0f;
+    transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.file-upload .file-select input[type=file] {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}

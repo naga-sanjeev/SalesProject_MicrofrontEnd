@@ -1,0 +1,22 @@
+<p-toast></p-toast>
+<div class="bg-img">
+    <div class="content">
+        <img class="imageStyle" src="/assets/Miracle-Logo-White.png">
+        <form [formGroup]="loginForm" class="loginForm">
+            <div class="field">
+                <app-input icon="pi-user" InputFieldName="Username" formControlName="username"
+                    [control]="loginForm.get('username')" [minlengthError]="userMinLengthError"></app-input>
+            </div>
+            <div class="field">
+                <app-input icon="pi-key" InputFieldName="Password" formControlName="password"
+                    [control]="loginForm.get('password')" [minlengthError]="passwordMinLengthError"></app-input>
+            </div>
+            <div class="field loginButton">
+                <app-button [buttonColor]="loginButton" [buttonText]="buttonName" (click)="onLogin()"></app-button>
+            </div>
+        </form>
+        <div>
+            <h6 class="copyRightStyle">© 2024 Miracle Software Systems, Inc.</h6>
+        </div>
+    </div>
+</div>

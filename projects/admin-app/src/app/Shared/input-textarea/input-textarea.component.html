@@ -1,0 +1,5 @@
+<textarea [rows]="2" [cols]="15" pInputTextarea [(ngModel)]="value" [autoResize]="true"
+    placeholder="{{textareaPlaceholder}}" (change)="updateValue($event)" [formControl]="control"></textarea>
+<div class="error" *ngIf="control?.invalid && (control?.touched || control?.dirty)">
+    <div *ngIf="control?.errors?.['required']">{{ textareaPlaceholder }} is required</div>
+</div>

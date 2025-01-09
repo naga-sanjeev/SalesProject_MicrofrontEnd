@@ -1,0 +1,62 @@
+<!-- <div class="topbar">
+    <div class="head">
+        <div>
+            <img alt="layout" src="assets/logo.png" class="miraclelogo">
+        </div>&nbsp;&nbsp;
+        <div class="bars-icon">
+            <i class="pi pi-bars" (click)="clickSideBar()"></i>
+        </div>
+    </div>&nbsp;&nbsp;
+    <div class="body">
+        <a><img alt="layout"  class="logo" src="assets/image1.png"></a>&nbsp;
+        <a><img alt="layout"  class="logo" src="assets/image3.png"></a>&nbsp;
+        <a><img alt="layout"  class="logo" src="assets/image2.png"></a>&nbsp;
+        <a><img alt="layout"  class="logo" src="assets/image4.png"></a>&nbsp;
+    </div>
+    <div class="end">
+        <p>{{name}}</p>
+        <img alt="layout" src="assets/profile-logo.jpg" class='profile'>
+    </div>
+</div> -->
+
+<div *ngIf="header1" class="topbar">
+    <div flexLayout="row" fxFlex>
+        <div fxFlex="18">
+            <div fxLayoutAlign="space-between center">
+                <img alt="layout" src="assets/logo.png" class="miracleLogo">
+                <i class="pi pi-bars" (click)="clickSideBar()"></i>
+            </div>
+        </div>
+        <div fxFlex="10">
+            <div class="body">
+                <a href="http://www.miraclesoft.com" target="_blank"><img alt="layout" class="logo"
+                        src="assets/image1.png" pTooltip="miraclesoft.com" tooltipPosition="bottom"></a>
+                <a href="http://me.miraclesoft.com" target="_blank"><img alt="layout" class="logo"
+                        src="assets/image3.png" pTooltip="me.miraclesoft.com" tooltipPosition="bottom"></a>
+                <a href="http://blog.miraclesoft.com" target="_blank"><img alt="layout" class="logo"
+                        src="assets/image2.png" pTooltip="blog.miraclesoft.com" tooltipPosition="bottom"></a>
+                <a href="http://help.miraclesoft.com" target="_blank"><img alt="layout" class="logo"
+                        src="assets/image4.png" pTooltip="help.miraclesoft.com" tooltipPosition="bottom"></a>
+            </div>
+        </div>
+        <div fxFlex="69">
+            <div class="headerStyle">
+                <span class="usernameStyle">{{name | titlecase}}</span>
+                <img alt="layout" src="assets/profile-logo.jpg" class='profile' (click)="menu.toggle($event)">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="!header1" class="topbar">
+    <div flexLayout="row">
+        <div *ngIf="header2" fxFlex>
+            <div [fxLayoutAlign]="fxLayoutAlign">
+                <i class="pi pi-bars" (click)="clickSideBar()"></i>
+                <img alt="layout" src="assets/logo.png" class="miracleLogo">
+                <img alt="layout" src="assets/profile-logo.jpg" class='profile'>
+            </div>
+        </div>
+    </div>
+</div>
+<p-menu #menu [popup]="true" [model]="items"></p-menu>

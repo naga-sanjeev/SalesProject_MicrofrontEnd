@@ -1,0 +1,16 @@
+<div fxLayout="column" class="sideBar">
+    <div *ngIf="mobileView" class="logoColor" fxLayoutAlign="space-evenly center">
+        <img alt="layout" src="assets/Miracle-Logo-White.png" class="miracleLogo">
+    </div>
+    <div class="menuItems">
+        <div (click)="linkSelected()" *ngFor="let menu of menuItemsData" class="menuItem" routerLinkActive="active">
+            <div class="menuContent" [routerLink]="menu.link" (click)="setActive(menu.link)">
+                <span class="menuLabel">{{ menu.label }}</span>
+                <span class="menuIcon">
+                    <i [class]="menu.icon"></i>
+                </span>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>

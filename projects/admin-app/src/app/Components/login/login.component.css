@@ -1,0 +1,128 @@
+/* .bg-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/login.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    width: 370px;
+    text-align: center;
+    padding: 27px 32px;
+    background: #282828c2;
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+
+    .content header {
+        color: #FFF;
+        font-size: 33px;
+        font-weight: 600;
+        margin: 0 0 35px 0;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.copyRightStyle{
+    margin-top: 39px;
+    color:#a9a7a7;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.imageStyle{
+    width: 180px;
+    height: 20%;
+    padding-bottom: 15px;
+}
+::ng-deep.p-button{
+    width:68%;
+    display: inline;
+} */
+
+.bg-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://hubble.miraclesoft.com/assets/img/bg-login.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    width: 370px;
+    text-align: center;
+    padding: 27px 32px;
+    background: #282828c2;
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+
+    .content header {
+        color: #FFF;
+        font-size: 33px;
+        font-weight: 600;
+        margin: 0 0 35px 0;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.copyRightStyle {
+    margin-top: 39px;
+    color: #a9a7a7;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.imageStyle {
+    width: 180px;
+    height: 20%;
+    padding-bottom: 15px;
+}
+
+:host ::ng-deep .field {
+    margin-bottom: 6px;
+}
+
+:host ::ng-deep .p-button {
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 0px;
+    width: 76%;
+}
+
+:host ::ng-deep .p-button:enabled:hover {
+    color: #fff;
+}
+
+:host ::ng-deep .p-inputtext {
+    border-radius: 0px;
+}
+
+:host ::ng-deep .p-toast .p-toast-message.p-toast-message-error {
+    background: #282828c2;
+    border-width: 0 0 0 0px;
+    color: #fff;
+}

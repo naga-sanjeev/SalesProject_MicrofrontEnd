@@ -1,0 +1,42 @@
+/* :host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content{
+    padding: 20px;
+}
+.body{
+height: 95%;
+} */
+:host{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content{
+    min-height: 89vh;
+}
+.body{
+    padding-top: 50px;  
+    min-height: 89vh;
+}
+
+@media screen and (max-width:999px) and (min-width:200px) {
+    .content{
+        flex: 0;
+    }
+}
+@media screen and (max-width:499px) and (min-width:200px) {
+    .body{
+        display: none;
+    }
+}
+
+:host ::ng-deep .p-toast .p-toast-message.p-toast-message-success {
+    background: #282828c2;
+    border-width: 0 0 0 0px;
+    color: #fff;
+}

@@ -1,0 +1,52 @@
+<app-breadcrumb [items]="breadcrumb"></app-breadcrumb>
+<div class="cardStyle">
+    <h4 class="heading">Existing Project Info</h4>
+    <form [formGroup]="infoForm">
+        <div class="p-fluid grid">
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Client Name</label>
+                <app-input formControlName="clientName" [control]="formControls[0]" [InputFieldName]="clientPlaceholder"
+                    [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Industry Type</label>
+                <app-dropdown formControlName="industryType" [control]="formControls[2]"
+                    [options]="industrydropdownData" [optionValue]="code" [placeholderValue]="industryPlaceholder"
+                    [selectedState]="selectedState"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Practice Type</label>
+                <app-dropdown formControlName="practiceName" [control]="formControls[3]"
+                    [options]="practiceDropdownData" [optionValue]="code" [selectedState]="selectedState"
+                    [placeholderValue]="practicePlaceholder"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Date</label>
+                <app-calendar formControlName="date" [dateField]="startDate" [control]="formControls[1]"
+                    [useMarginLeft]="true"></app-calendar>
+            </div>
+            <div class="field col-12 md:col-12">
+                <label class="labelStyle">POC</label>
+                <app-input formControlName="pointOfContact" [control]="formControls[4]"
+                    [InputFieldName]="pocPlaceholder" [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-12">
+                <label class="labelStyle">Requirement</label>
+                <app-input-textarea formControlName="requirement" [textareaPlaceholder]="requirementPlaceholder"
+                    [control]="formControls[5]" [useMarginLeft]="true"></app-input-textarea>
+            </div>
+            <div class="field col-12 md:col-12">
+                <label class="labelStyle">Conversation</label>
+                <app-input-textarea formControlName="conversation" [textareaPlaceholder]="conversationPlaceholder"
+                    [control]="formControls[6]" [useMarginLeft]="true"></app-input-textarea>
+            </div>
+        </div><br>
+        <!-- <input #Image type="file" (change)="handleFileInput($event)" />
+        <img width="100%" *ngIf="imageUrl" [src]="imageUrl" class="image"> -->
+        <div class="col-12 buttonStyle">
+            <app-button [buttonText]="resetButton" (click)="reset()"
+                [buttonColor]="resetButtonColor"></app-button>&nbsp;
+            <app-button [buttonText]="editButton" (click)="edit()" [buttonColor]="editButtonColor"></app-button>
+        </div>
+    </form>
+</div>

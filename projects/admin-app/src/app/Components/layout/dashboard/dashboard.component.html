@@ -1,0 +1,21 @@
+<p-toast></p-toast>
+<app-header *ngIf="normalView"></app-header>
+<div *ngIf="normalView" fxLayout="row" fxFlex="100" style="padding-top: 50px;">
+    <app-sidenav fxLayout="column" [fxFlex]="flexValue1" *ngIf="menu2"></app-sidenav>
+    <div fxLayout="column" [fxFlex]="flexValue2">
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>
+<div flexLayout="row" fxFlex *ngIf="mobileView">
+    <app-sidenav fxLayout="column" [fxFlex]="flexValue1" *ngIf="mobileResponsive"></app-sidenav>
+    <div flexLayout="column" [fxFlex]="flexValue2">
+        <app-header flexLayout="column"></app-header>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

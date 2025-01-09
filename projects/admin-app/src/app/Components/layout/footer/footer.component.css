@@ -1,0 +1,56 @@
+/* .text{
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    padding-bottom: 2%;
+} */
+
+/* .hint-text{
+    opacity: .7;
+    position: static;
+    bottom: 0;
+}
+
+.font-montserrat{
+    line-height: 18px;
+    font-size: 85%;
+}
+
+@media screen and (max-width:770px) {
+    .text{
+        align-items: center;
+        position: relative;
+        padding-top: 2rem;
+    }
+} */
+
+.text1{
+    border-top: 1px solid #e1e1e1;
+}
+.text{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    text-align: center;
+  
+}
+
+.hint-text{
+    opacity: .7;
+}
+
+.font-montserrat{
+    line-height: 18px;
+    font-size: 85%;
+}
+
+@media screen and (max-width:1000px) {
+    /* .text{
+        align-items: center;
+        position: relative;
+        padding-top: 2rem;
+        bottom: 0;
+    } */
+}

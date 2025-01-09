@@ -1,0 +1,43 @@
+<p-table [columns]="cols" [value]="products">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns ;let i = index" class="tableData">
+                <ng-container *ngIf="col.header === 'Status'">
+                    <span
+                        [ngClass]="{'active-status': rowData[col.field] === 'Active', 'inactive-status': rowData[col.field] === 'InActive'}">
+                        {{rowData[col.field] || '-'}}
+                    </span>
+                </ng-container>
+                <ng-container
+                    *ngIf="col.header !== 'Status' && col.header !== 'Architecture' && col.header !== 'Project Info' && col.header !== 'Actions' && col.header !== 'Notes'">
+                    {{rowData[col.field] || '-'}}
+                </ng-container>
+                <ng-container *ngIf="col.header === 'Architecture' && (role=='Sales Lead' || 'Sales Trainee')">
+                    <i class="pi pi-eye" pTooltip="Architecture" tooltipPosition="top"
+                        (click)="openDialog1(rowData, columns[0])"></i>&nbsp;
+                    <i class="pi pi-download" pTooltip="Download" tooltipPosition="top" (click)="downloadImage(rowData[col.field])"></i>
+                </ng-container>
+                <ng-container *ngIf="col.header == 'Project Info'">
+                    <p class="p-text"><a (click)="openDialog(rowData)">more</a></p>
+                </ng-container>
+                <ng-container *ngIf="col.header == 'Notes'">
+                    <p class="p-text"><a (click)="openDialog3(rowData)">more</a></p>
+                </ng-container>
+                <ng-container *ngIf="col.header === 'Actions'">
+                    <i class="pi pi-pencil" pTooltip="Edit" tooltipPosition="top"
+                        (click)="goToProjectInfo(rowData)"></i>&nbsp;
+                    <i class="pi pi-history" pTooltip="History" tooltipPosition="top"
+                        (click)="openDialog2(rowData, columns[0])"></i>&nbsp;
+                    <i class="pi pi-trash" pTooltip="Delete" tooltipPosition="top" (click)="deleteRow(rowData)"></i>
+                </ng-container>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

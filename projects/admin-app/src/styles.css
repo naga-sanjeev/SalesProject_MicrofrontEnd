@@ -1,0 +1,29 @@
+.error {
+  font-size: 14px;
+  color: #EF4048;
+  display: block;
+  margin-top: 5px;
+  margin-left: -84px;
+  font-family: "Open Sans", sans-serif !important;
+}
+
+select.ng-invalid.ng-touched,
+p-autocomplete.ng-invalid.ng-touched,
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+p-calendar.ng-invalid.ng-touched .p-inputtext,
+p-dropdown.ng-invalid.ng-touched>div {
+  border: 1px solid red;
+}
+
+:host ::ng-deep .p-toast .p-toast-message.p-toast-message-success {
+  background: #282828c2;
+  border-width: 0 0 0 0px;
+  color: #fff;
+}
+
+:host ::ng-deep .p-toast .p-toast-message.p-toast-message-error {
+  background: #282828c2;
+  border-width: 0 0 0 0px;
+  color: #fff;
+}

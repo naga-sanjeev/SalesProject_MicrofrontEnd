@@ -1,0 +1,31 @@
+.input-container {
+    position: relative;
+}
+
+.pi {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 700;
+}
+
+.starting-icon,
+.ending-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.starting-icon {
+  left: 1px; 
+}
+
+.ending-icon {
+  right: 120px; 
+}
+
+.error-message {
+  margin-left: 80px; 
+}

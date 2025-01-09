@@ -1,0 +1,5 @@
+<p-calendar [(ngModel)]="selectedDate" [showIcon]="true" inputId="icon" placeholder="{{dateField}}"
+    (ngModelChange)="updateValue($event)" [formControl]="control"></p-calendar>
+<div class="error" *ngIf="(control?.touched || control?.dirty)" [ngStyle]="getErrorStyle()">
+    <div *ngIf="control?.errors?.['required']">{{ dateField }} is required</div>
+</div>

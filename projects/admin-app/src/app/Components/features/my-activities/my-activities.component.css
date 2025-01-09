@@ -1,0 +1,79 @@
+:host ::ng-deep .p-datatable .p-datatable-tbody>tr>td {
+    text-align: center;
+    border-width: 0 0 1px 0;
+    padding: 0rem 0rem;
+}
+
+:host ::ng-deep .field {
+    margin-bottom: 0px;
+}
+
+:host ::ng-deep .p-button {
+    display: inline-flex;
+    justify-content: center;
+}
+
+:host ::ng-deep .p-datepicker table td {
+    padding: 0rem;
+}
+
+:host ::ng-deep .p-datepicker table td>span {
+    width: 2.5rem;
+    height: 1.5rem;
+    border-radius: 0%;
+    transition: box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+:host ::ng-deep .p-calendar .p-datepicker {
+    min-width: 0%;
+}
+
+:host ::ng-deep .p-datepicker .p-datepicker-header {
+    padding: 0rem;
+    color: #495057;
+    background: #ffffff;
+    font-weight: 600;
+    margin: 0;
+    border-bottom: 0px solid #dee2e6;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+:host ::ng-deep .p-datepicker table td.p-datepicker-today>span {
+    background: #00aae7;
+    color: white;
+    border-color: transparent;
+}
+
+:host ::ng-deep .p-datepicker table td.p-datepicker-today>span :hover {
+    background: #00aae7;
+    color: white;
+    border-color: transparent;
+}
+
+.p-inputtext {
+    font-size: 1rem;
+    background: #00aae7;
+    color: white;
+}
+
+.p-input-icon-left>i:first-of-type {
+    left: 0.75rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+::placeholder {
+    color: white;
+    font-weight: 600;
+}
+
+.p-input-icon-left .pi-times-circle {
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: -26px;
+    margin-top: -8px;
+    color: white;
+}

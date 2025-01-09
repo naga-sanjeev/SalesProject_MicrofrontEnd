@@ -1,0 +1,65 @@
+<app-breadcrumb [items]="breadcrumb"></app-breadcrumb>
+
+<div class="cardStyle">
+    <h4 class="heading">Add Existing Project Info</h4>
+    <form [formGroup]="addProjectForm">
+        <div class="p-fluid p-formgrid grid">
+            <div class="field col-12 md:col-6">
+                <app-input formControlName="clientName" [InputFieldName]="clientName"
+                    [control]="addProjectForm.get('clientName')" [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-6">
+                <app-input formControlName="projectName" [InputFieldName]="projectName"
+                    [control]="addProjectForm.get('projectName')" [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-6">
+                <app-dropdown formControlName="industryType" [options]="industrydropdownData"
+                    [placeholderValue]="industryPlaceholder" [control]="addProjectForm.get('industryType')"
+                    [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <app-dropdown formControlName="accountType" [options]="accountsDropdownData"
+                    [placeholderValue]="accountPlaceholder" [control]="addProjectForm.get('accountType')"
+                    [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <app-dropdown formControlName="practiceName" [options]="practiceDropdownData" optionLabelValue="name"
+                    [optionLabel]="name" [placeholderValue]="practicePlaceholder"
+                    [control]="addProjectForm.get('practiceName')" [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <app-dropdown formControlName="status" [placeholderValue]="statusPlaceholder" [options]="statusDropdown"
+                    [optionLabel]="name" [control]="addProjectForm.get('status')" [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <app-calendar formControlName="startDate" [dateField]="startDate"
+                    [control]="addProjectForm.get('startDate')" [useMarginLeft]="true"></app-calendar>
+            </div>
+            <div class="field col-12 md:col-6">
+                <app-calendar formControlName="endDate" [dateField]="endDate" [control]="addProjectForm.get('endDate')"
+                    [useMarginLeft]="true"></app-calendar>
+            </div>
+            <div class="field col-12 md:col-12">
+                <app-input formControlName="technology" [InputFieldName]="technology"
+                    [control]="addProjectForm.get('technology')" [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-12">
+                <app-input-textarea formControlName="description" [textareaPlaceholder]="description"
+                    [control]="addProjectForm.get('description')" [useMarginLeft]="true"></app-input-textarea>
+            </div>
+            <div class="col-12">
+                <span class="col-2 uploadImgStyle">
+                    <input #Image type="file" formControlName="imageUpload" (change)="handleFileInput($event)"/>
+                    <img width="100%" [src]="imageUrl" class="image">
+                </span>&nbsp;
+                <span class="col-1 iconStyle" >
+                    <i class="pi pi-times-circle" (click)="clearImage()"></i>
+                </span>
+            </div>
+            <div class="col-12 buttonStyle">
+                <app-button [buttonText]="buttonName" [buttonColor]="addClientColor"
+                    (click)="addExistingProject()"></app-button>
+            </div>
+        </div>
+    </form>
+</div>

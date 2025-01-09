@@ -1,0 +1,5 @@
+<p-autoComplete [(ngModel)]="text" placeholder=" {{placeholder}}" [suggestions]="filteredValues" [multiple]="true"
+    (completeMethod)="search($event)" field="label" [formControl]="control"></p-autoComplete>
+
+<!-- <p-autoComplete [(ngModel)]="text" placeholder=" {{placeholder}}" [formControl]="control" [suggestions]="filteredValues"
+    (onSelect)="onOptionSelect($event)" field="label"></p-autoComplete> -->

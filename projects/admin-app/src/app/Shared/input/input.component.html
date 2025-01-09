@@ -1,0 +1,27 @@
+<!-- <div class="grid">
+    <div class="field col-12 ">
+        <div class="input-container">
+            <span *ngIf="icon" class="starting-icon"><i class="pi {{ icon }}"></i></span>
+            <input [style.padding-left.px]="icon ? 35 : 12" class="input-field" pInputText
+                [(ngModel)]="value" [type]="isPassword ? (showPassword ? 'text' : 'password') : 'text'" placeholder="{{InputFieldName}}" (change)="updateValue($event)" />
+            <span *ngIf="isPassword" class="ending-icon"><i class="pi {{ showPassword ? 'pi-eye' : 'pi-eye-slash' }}" (click)="togglePasswordVisibility()"></i></span>
+        </div>
+    </div>
+</div> -->
+
+<div class="grid">
+    <div class="field col-12">
+        <div class="input-container">
+            <span *ngIf="icon" class="starting-icon"><i class="pi {{ icon }}"></i></span>
+            <input [style.padding-left.px]="icon ? 35 : 12" class="input-field" pInputText
+                [type]="isPassword ? (showPassword ? 'text' : 'password') : 'text'" placeholder="{{ InputFieldName }}"
+                (change)="updateValue($event)" [(ngModel)]="value" [formControl]="control" />
+            <span *ngIf="isPassword" class="ending-icon"><i class="pi {{ showPassword ? 'pi-eye' : 'pi-eye-slash' }}"
+                    (click)="togglePasswordVisibility()"></i></span>
+        </div>
+        <div class="error" *ngIf="control?.invalid && (control?.touched || control?.dirty)" [ngStyle]="getErrorStyle()">
+            <div *ngIf="control?.errors?.['required']">{{ InputFieldName }} is required</div>
+            <div class="error-message" *ngIf="control?.errors?.['minlength']">{{ minlengthError }}</div>
+        </div>
+    </div>
+</div>

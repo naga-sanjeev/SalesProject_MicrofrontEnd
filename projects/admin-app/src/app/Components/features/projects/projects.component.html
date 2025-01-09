@@ -1,0 +1,59 @@
+<app-breadcrumb [items]="breadcrumb"></app-breadcrumb>
+<div class="card">
+	<div class="p-fluid p-formgrid grid">
+		<div class="field col-12 md:col-12">
+			<span class="p-input-icon-left">
+				<i class="pi pi-search"></i>
+				<input pInputText type="text" [(ngModel)]="searchData" placeholder="Global Search"
+				(keyup)="globalSearch($event)" />
+				<i class="pi pi-times-circle" *ngIf="display" (click)="remove()"></i>
+			</span>
+		</div>
+	</div>
+	<form [formGroup]="projectForm">
+		<div class="p-fluid p-formgrid grid">
+			<div class="field col-12 md:col-6">
+				<app-auto-complete formControlName="projectName" [placeholder]="InputFieldName"
+					(optionSelected)="autoCompleteSelected($event)" [control]="projectForm.get('projectName')"
+					[allValues]="autocompleteValues"></app-auto-complete>
+			</div>
+			<div class="field col-12 md:col-6">
+				<app-multi-select [options]="industrydropdownData" [control]="projectForm.get('industryType')"
+					[placeholderValue]="industryPlaceholder" formControlName="industryType"></app-multi-select>
+			</div>
+			<div class="field col-12 md:col-3">
+				<app-multi-select [options]="practiceDropdownData" [selectedState]="selectedState"
+					[placeholderValue]="practicePlaceholder" [optionLabel]="name"
+					[control]="projectForm.get('practiceType')" formControlName="practiceType"></app-multi-select>
+			</div>
+			<div class="field col-12 md:col-3">
+				<app-multi-select [options]="AccountsDropdownData" [selectedState]="selectedState"
+					[control]="projectForm.get('accountType')" [placeholderValue]="accountPlaceholder"
+					formControlName="accountType"></app-multi-select>
+			</div>
+			<!-- <div class="field col-12 md:col-6">
+				<app-dropdown [options]="industrydropdownData" [control]="projectForm.get('industryType')"
+					[placeholderValue]="industryPlaceholder" formControlName="industryType"></app-dropdown>
+			</div>
+			<div class="field col-12 md:col-3">
+				<app-dropdown [options]="practiceDropdownData" [selectedState]="selectedState"
+					[placeholderValue]="practicePlaceholder" [optionLabel]="name"
+					[control]="projectForm.get('practiceType')" formControlName="practiceType"></app-dropdown>
+			</div>
+			<div class="field col-12 md:col-3">
+				<app-dropdown [options]="AccountsDropdownData" [selectedState]="selectedState"
+					[control]="projectForm.get('accountType')" [placeholderValue]="accountPlaceholder"
+					formControlName="accountType"></app-dropdown>
+			</div> -->
+			<div class="field col-12 md:col-3">
+				<app-button [buttonText]="resetButton" [buttonColor]="resetButtonColor" (click)="reset()"></app-button>
+			</div>
+			<div class="field col-12 md:col-3">
+				<app-button [buttonText]="searchButton" [buttonColor]="searchButtonColor"
+					(click)="search()"></app-button>
+			</div>
+		</div>
+	</form>
+
+</div>
+<app-table [table_Columns]="cols" [table_Data]="filteredTableData"></app-table>

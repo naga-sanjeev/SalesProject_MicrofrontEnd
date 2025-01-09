@@ -1,0 +1,77 @@
+<app-breadcrumb [items]="breadcrumb"></app-breadcrumb>
+
+<div class="cardStyle">
+    <h4 class="heading">Edit Existing Project Info</h4>
+    <form [formGroup]="editForm">
+        <div class="p-fluid p-formgrid grid">
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Client Name</label>
+                <app-input formControlName="clientName" [InputFieldName]="clientName"
+                    [control]="editForm.get('clientName')" [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Project Name</label>
+                <app-input formControlName="projectName" [InputFieldName]="projectName"
+                    [control]="editForm.get('projectName')" [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Industry Type</label>
+                <app-dropdown formControlName="industryType" [options]="industrydropdownData"
+                    [placeholderValue]="industryPlaceholder" [control]="editForm.get('industryType')"
+                    [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Account Type</label>
+                <app-dropdown formControlName="accountType" [options]="accountsDropdownData"
+                    [placeholderValue]="accountPlaceholder" [control]="editForm.get('accountType')"
+                    [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Practice Name</label>
+                <app-dropdown formControlName="practiceName" [options]="practiceDropdownData" optionLabelValue="name"
+                    [optionLabel]="name" [placeholderValue]="practicePlaceholder"
+                    [control]="editForm.get('practiceName')" [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Status</label>
+                <app-dropdown formControlName="status" [placeholderValue]="statusPlaceholder" [options]="statusDropdown"
+                    [optionLabel]="name" [control]="editForm.get('status')" [useMarginLeft]="true"></app-dropdown>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">Start Date</label>
+                <app-calendar formControlName="startDate" [dateField]="startDate" [control]="editForm.get('startDate')"
+                    [useMarginLeft]="true"></app-calendar>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label class="labelStyle">End Date</label>
+                <app-calendar formControlName="endDate" [dateField]="endDate" [control]="editForm.get('endDate')"
+                    [useMarginLeft]="true"></app-calendar>
+            </div>
+            <div class="field col-12 md:col-12">
+                <label class="labelStyle">Technology</label>
+                <app-input formControlName="technology" [InputFieldName]="technology"
+                    [control]="editForm.get('technology')" [useMarginLeft]="true"></app-input>
+            </div>
+            <div class="field col-12 md:col-12">
+                <label class="labelStyle">Description</label>
+                <app-input-textarea formControlName="description" [textareaPlaceholder]="description"
+                    [control]="editForm.get('description')" [useMarginLeft]="true"></app-input-textarea>
+            </div>
+            <div class="col-12">
+                <div class="file-upload">
+                    <span class="file-select">
+                        <div class="file-select-button" id="fileName">Choose File</div>
+                        <div class="file-select-name" id="noFile">{{ noFileText }}</div>
+                        <input type="file" id="file" (change)="handleFileInput($event)" />
+                    </span>
+                </div>
+            </div>
+            <div class="col-12 buttonStyle">
+                <app-button [buttonText]="resetButton" (click)="reset()"
+                    [buttonColor]="resetButtonColor"></app-button>&nbsp;
+                <app-button [buttonText]="buttonName" [buttonColor]="addClientColor"
+                    (click)="addExistingProject()"></app-button>
+            </div>
+        </div>
+    </form>
+</div>
